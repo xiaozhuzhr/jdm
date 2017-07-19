@@ -1,0 +1,254 @@
+@charset "utf-8";
+/* 最外层盒子 */
+.jd_container{
+    width:100%;
+}
+/* 顶部通栏 */
+.jd_header{
+    height: 40px;
+    width: 100%;
+    background-color: rgba(201,21,35,0);
+    position:fixed;
+    z-index: 99;
+    /* 给左侧jd图和右边登录文字让出空间 */
+    padding: 0 60px 0 70px;
+}
+.header_logo{
+	width: 60px;
+	height: 36px;
+	background-image: url(../images/sprites.png);
+	position: absolute;
+	left:5px;
+	top:2px;
+	background-position: 0 -103px;
+	background-size: 200px 200px;
+}
+/*搜索输入框*/
+.header_search{
+	width: 100%;
+	height: 30px;
+	margin-top: 5px;
+	border-radius: 15px;
+	/* 给搜索图片留出空间 */
+	padding-left: 25px;
+}
+/* 搜索框中的放大镜 */
+.header_glass{
+	width: 20px;
+	height: 20px;
+	/* background-image: url("../images/sprites.png"); */
+	position: absolute;
+	/* background-position: -60px -109px;
+	background-size: 200px 200px; */
+	background: url("../images/sprites.png") no-repeat -60px -109px/200px 200px;
+	top:10px;
+	left:75px;
+}
+/* 登录按钮 */
+.header_login{
+	position: absolute;
+	right: 10px;
+	top:0;
+	line-height: 40px;
+	color: white;
+	font-size: 17px;
+}
+/* 轮播图 */
+.jd_banner{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.banner_images{
+	width: 1000%;
+	transform:translateX(-10%);
+}
+.banner_images li{
+	float: left;
+	width: 10%;
+}
+.banner_images li a{
+	display: block;
+	width: 100%;
+}
+.banner_images li a img{
+	display: block;
+	width: 100%;
+}
+/* 轮播图下的索引 */
+.banner_index{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -44px;
+}
+/* 小圆圈们 */
+.banner_index li{
+	float: left;
+	width: 6px;
+	height: 6px;
+	border:1px solid white;
+	border-radius: 50%;
+	margin-left: 5px;
+}
+li.current{
+	background-color: white;
+}
+/*导航*/
+.jd_nav{
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+.jd_nav ul{
+	width: 100%;
+	/* 把内容压下去 */
+	padding-top: 5px;
+}
+.jd_nav ul li{
+	float: left;
+	width: 25%;
+}
+.jd_nav ul li a{
+	width: 100%;
+	display: block;
+	color: #333;
+}
+.jd_nav ul li a img{
+	width: 60%;
+	margin: 0 auto;
+	display: block;
+}
+.jd_nav ul li a p{
+	color: gray;
+	text-align: center;
+	padding: 5px 0;
+}
+
+.jd_main{
+	width: 100%;
+	margin-top: 10px;
+}
+.jd_main .main_content{
+	width: 100%;
+	box-shadow: 0 0 2px gray;
+	min-height: 150px;
+	margin-bottom: 5px;
+}
+.jd_main .main_content .content_top{
+	height: 32px;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+.jd_main .main_content .content_buttom{
+	width: 100%;
+}
+/* 京东第一个主体 */
+.jd_main .main_content:nth-child(1) .content_top{
+	border-bottom: none;
+}
+.jd_main .main_content:nth-child(1) .content_top span{
+	width: 20px;
+	height: 25px;
+	float: left;
+	background: url(../images/seckill-icon.png) no-repeat 0 0/20px 25px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+/*掌上秒杀*/
+.jd_main .main_content:nth-child(1) .content_top p{
+	color: red;
+	margin-top: 5px;
+	line-height: 32px;
+	float: left;
+}
+/* 定时器 */
+.jd_main .main_content:nth-child(1) .content_top ul li{
+	float: left;
+	margin-left: 5px;
+	background-color: black;
+	color: white;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	text-align: center;
+	margin-top:14px;
+}
+/* 将冒号所在的li背景改变 */
+.jd_main .main_content:nth-child(1) .content_top ul li:nth-child(3n){
+	background-color: transparent;
+	color: black;
+}
+.jd_main .main_content:nth-child(1) .content_top a{
+	color: gray;
+	line-height: 32px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+/* 第一个主体内容 */
+.jd_main .main_content .content_buttom ul{
+	width: 100%;
+}
+.jd_main .main_content:nth-of-type(1) .content_buttom ul li{
+	float: left;
+	width: 33.3333%;
+}
+.jd_main .main_content .content_buttom ul li a{
+	display: block;
+	width: 100%;
+}
+.jd_main .main_content .content_buttom ul li a img{
+	display: block;
+	width: 60%;
+	margin: 0 auto;
+}
+.jd_main .main_content .content_buttom ul li a p{
+	color: gray;
+	text-align: center;
+	font-size: 12px;
+	padding: 2px 0;
+}
+/* 第一个p是红色 第二个中划线 */
+.jd_main .main_content .content_buttom ul li a p:nth-of-type(1){
+	color: red;
+}
+.jd_main .main_content .content_buttom ul li a p:nth-of-type(2){
+	text-decoration: line-through;
+}
+/* 除第一个以外的主体部分 */
+.jd_main .main_content:nth-of-type(n+2){
+
+}
+.jd_main .main_content:nth-of-type(n+2) span{
+	color: red;
+	line-height: 32px;
+	margin-left: 15px;
+	position: relative;
+}
+/* 前面的小竖杠 */
+.jd_main .main_content:nth-of-type(n+2) span::before{
+	content:"";
+	position: absolute;
+	width: 3px;
+	height: 12px;
+	background-color: red;
+	left: -10px;
+	top: 10px;
+}
+.jd_main .main_content:nth-of-type(n+2) .content_buttom{
+	width: 100%;
+}
+.jd_main .main_content:nth-of-type(n+2) .content_buttom ul{
+	width: 100%;
+}
+.jd_main .main_content:nth-of-type(n+2) .content_buttom ul li{
+	width: 50%;
+}
+.jd_main .main_content:nth-of-type(n+2) .content_buttom ul li a{
+	width: 100%;
+	display: block;
+}
+.jd_main .main_content:nth-of-type(n+2) .content_buttom ul li a img{
+	width: 100%;
+	display: block;
+}
